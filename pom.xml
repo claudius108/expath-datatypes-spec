@@ -11,11 +11,11 @@
 		<version>0.2</version>
 	</parent>
 
-	<artifactId>datatype-conversion</artifactId>
+	<artifactId>datatypes</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
-	<name>Specification for EXPath Datatype Conversion Module</name>
-	<url>http://kuberam.ro/specs/expath/datatype-conversion/datatype-conversion.html</url>
+	<name>Specification for EXPath Datatypes Module</name>
+	<url>http://kuberam.ro/specs/expath/datatypes/datatypes.html</url>
 
 	<properties>
 		<java-package-name>datatypeConversion</java-package-name>
