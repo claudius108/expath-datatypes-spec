@@ -1,1 +1,1 @@
-# datatypes-spec
+# EXPath Datatypes specification, see http://kuberam.ro/specs/expath/datatypes/datatypes.html.
