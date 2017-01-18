@@ -19,7 +19,7 @@
 
 	<properties>
 		<java-package-name>datatypeConversion</java-package-name>
-		<libName>Library for EXPath Datatype Conversion Module</libName>
+		<libName>Library for EXPath Datatypes Module</libName>
 		<libVersion>0.0.1</libVersion>
 	</properties>
 
