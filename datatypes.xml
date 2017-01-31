@@ -72,8 +72,8 @@
          <div2>
             <head>Namespace conventions</head>
             <p>The module defined by this document defines functions and elements in the namespace
-                  <code id="module-namespace">http://expath.org/ns/datatype-conversion</code>. In this document, the
-                  <code id="module-prefix">dt-conv</code> prefix, when used, is bound to this namespace URI.</p>
+                  <code id="module-namespace">http://expath.org/ns/datatypes</code>. In this document, the
+                  <code id="module-prefix">datatypes</code> prefix, when used, is bound to this namespace URI.</p>
             <p>Error codes are defined in the namespace <code>http://expath.org/ns/error</code>. In
                this document, the <code>err</code> prefix, when used, is bound to this namespace
                URI.</p>
@@ -90,10 +90,10 @@
          <head><code>xs:base64Binary</code> to other datatypes</head>
          <p>These functions provide conversion from xs:base64Binary datatype to other datatypes.</p>
          <div2>
-            <head>The <code>dt-conv:base64Binary-to-byte</code> function</head>
+            <head>The <code>datatypes:base64Binary-to-byte</code> function</head>
             <p>This function converts from xs:base64Binary to xs:byte.</p>
             <eg>
-<spec:function>dt-conv:base64Binary-to-byte</spec:function>($data as <spec:type>xs:base64Binary?</spec:type>) as <spec:type>xs:byte*</spec:type>
+<spec:function>datatypes:base64Binary-to-byte</spec:function>($data as <spec:type>xs:base64Binary?</spec:type>) as <spec:type>xs:byte*</spec:type>
 </eg>
             <ulist>
                <item>
@@ -102,13 +102,13 @@
             </ulist>            
          </div2>          
          <div2>
-            <head>The <code>dt-conv:base64Binary-to-string</code> function</head>
+            <head>The <code>datatypes:base64Binary-to-string</code> function</head>
             <p>This function converts from xs:base64Binary to xs:string.</p>
             <eg>
-<spec:function>dt-conv:base64Binary-to-string</spec:function>($data as <spec:type>xs:base64Binary?</spec:type>) as <spec:type>xs:string?</spec:type>
+<spec:function>datatypes:base64Binary-to-string</spec:function>($data as <spec:type>xs:base64Binary?</spec:type>) as <spec:type>xs:string?</spec:type>
 </eg>
             <eg>
-<spec:function>dt-conv:base64Binary-to-string</spec:function>($data as <spec:type>xs:base64Binary?</spec:type>,
+<spec:function>datatypes:base64Binary-to-string</spec:function>($data as <spec:type>xs:base64Binary?</spec:type>,
 		$encoding as xs:string) as <spec:type>xs:string?</spec:type>
 </eg>
             <ulist>
@@ -126,10 +126,10 @@
          <head><code>xs:byte</code> to other datatypes</head>
          <p>These functions provide conversion from xs:byte datatype to other datatypes.</p>
          <div2>
-            <head>The <code>dt-conv:byte-to-base64Binary</code> function</head>
+            <head>The <code>datatypes:byte-to-base64Binary</code> function</head>
             <p>This function converts from xs:byte to xs:base64Binary.</p>
             <eg>
-<spec:function>dt-conv:byte-to-base64Binary</spec:function>($data as <spec:type>xs:byte*</spec:type>) as <spec:type>xs:base64Binary?</spec:type>
+<spec:function>datatypes:byte-to-base64Binary</spec:function>($data as <spec:type>xs:byte*</spec:type>) as <spec:type>xs:base64Binary?</spec:type>
 </eg>
             <ulist>
                <item>
@@ -138,10 +138,10 @@
             </ulist>            
          </div2>  
          <div2>
-            <head>The <code>dt-conv:byte-to-hexBinary</code> function</head>
+            <head>The <code>datatypes:byte-to-hexBinary</code> function</head>
             <p>This function converts from xs:byte to xs:hexBinary.</p>
             <eg>
-<spec:function>dt-conv:byte-to-hexBinary</spec:function>($data as <spec:type>xs:byte*</spec:type>) as <spec:type>xs:hexBinary?</spec:type>
+<spec:function>datatypes:byte-to-hexBinary</spec:function>($data as <spec:type>xs:byte*</spec:type>) as <spec:type>xs:hexBinary?</spec:type>
 </eg>
             <ulist>
                <item>
@@ -154,10 +154,10 @@
          <head><code>xs:hexBinary</code> to other datatypes</head>
          <p>These functions provide conversion from xs:hexBinary datatype to other datatypes.</p>
          <div2>
-            <head>The <code>dt-conv:hexBinary-to-byte</code> function</head>
+            <head>The <code>datatypes:hexBinary-to-byte</code> function</head>
             <p>This function converts from xs:hexBinary to xs:byte.</p>
             <eg>
-<spec:function>dt-conv:hexBinary-to-byte</spec:function>($data as <spec:type>xs:hexBinary?</spec:type>) as <spec:type>xs:byte*</spec:type>
+<spec:function>datatypes:hexBinary-to-byte</spec:function>($data as <spec:type>xs:hexBinary?</spec:type>) as <spec:type>xs:byte*</spec:type>
 </eg>
             <ulist>
                <item>
@@ -166,13 +166,13 @@
             </ulist>            
          </div2>          
          <div2>
-            <head>The <code>dt-conv:hexBinary-to-string</code> function</head>
+            <head>The <code>datatypes:hexBinary-to-string</code> function</head>
             <p>This function converts from xs:hexBinary to xs:string.</p>
             <eg>
-<spec:function>dt-conv:hexBinary-to-string</spec:function>($data as <spec:type>xs:hexBinary?</spec:type>) as <spec:type>xs:string?</spec:type>
+<spec:function>datatypes:hexBinary-to-string</spec:function>($data as <spec:type>xs:hexBinary?</spec:type>) as <spec:type>xs:string?</spec:type>
 </eg>
             <eg>
-<spec:function>dt-conv:hexBinary-to-string</spec:function>($data as <spec:type>xs:hexBinary?</spec:type>,
+<spec:function>datatypes:hexBinary-to-string</spec:function>($data as <spec:type>xs:hexBinary?</spec:type>,
 		$encoding as xs:string) as <spec:type>xs:string?</spec:type>
 </eg>
             <ulist>
@@ -190,13 +190,13 @@
          <head><code>xs:string</code> to other datatypes</head>
          <p>These functions provide conversion from xs:string datatype to other datatypes.</p>
          <div2>
-            <head>The <code>dt-conv:string-to-base64Binary</code> function</head>
+            <head>The <code>datatypes:string-to-base64Binary</code> function</head>
             <p>This function converts from xs:string to xs:base64Binary.</p>
             <eg>
-<spec:function>dt-conv:string-to-base64Binary</spec:function>($data as <spec:type>xs:string?</spec:type>) as <spec:type>xs:base64Binary?</spec:type>
+<spec:function>datatypes:string-to-base64Binary</spec:function>($data as <spec:type>xs:string?</spec:type>) as <spec:type>xs:base64Binary?</spec:type>
 </eg>
             <eg>
-<spec:function>dt-conv:string-to-base64Binary</spec:function>($data as <spec:type>xs:string?</spec:type>,
+<spec:function>datatypes:string-to-base64Binary</spec:function>($data as <spec:type>xs:string?</spec:type>,
 		$encoding as xs:string) as <spec:type>xs:base64Binary?</spec:type>
 </eg>
             <ulist>
@@ -210,13 +210,13 @@
             </ulist>            
          </div2> 
          <div2>
-            <head>The <code>dt-conv:string-to-hexBinary</code> function</head>
+            <head>The <code>datatypes:string-to-hexBinary</code> function</head>
             <p>This function converts from xs:string to xs:hexBinary.</p>
             <eg>
-<spec:function>dt-conv:string-to-hexBinary</spec:function>($data as <spec:type>xs:string?</spec:type>) as <spec:type>xs:hexBinary?</spec:type>
+<spec:function>datatypes:string-to-hexBinary</spec:function>($data as <spec:type>xs:string?</spec:type>) as <spec:type>xs:hexBinary?</spec:type>
 </eg>
             <eg>
-<spec:function>dt-conv:string-to-hexBinary</spec:function>($data as <spec:type>xs:string?</spec:type>,
+<spec:function>datatypes:string-to-hexBinary</spec:function>($data as <spec:type>xs:string?</spec:type>,
 		$encoding as xs:string) as <spec:type>xs:hexBinary?</spec:type>
 </eg>
             <ulist>
@@ -230,10 +230,10 @@
             </ulist>            
          </div2>  
          <div2>
-            <head>The <code>dt-conv:string-to-integer</code> function</head>
+            <head>The <code>datatypes:string-to-integer</code> function</head>
             <p>This function converts from xs:string to xs:integer.</p>
             <eg>
-<spec:function>dt-conv:string-to-integer</spec:function>($data as <spec:type>xs:string?</spec:type>,
+<spec:function>datatypes:string-to-integer</spec:function>($data as <spec:type>xs:string?</spec:type>,
 		$radix as <spec:type>xs:integer</spec:type>) as <spec:type>xs:integer?</spec:type>
 </eg>
             <ulist>
@@ -250,10 +250,10 @@
          <head><code>xs:integer</code> to other datatypes</head>
          <p>These functions provide conversion from xs:integer datatype to other datatypes.</p>
          <div2>
-            <head>The <code>dt-conv:integer-to-string</code> function</head>
+            <head>The <code>datatypes:integer-to-string</code> function</head>
             <p>This function converts from xs:integer to xs:string.</p>
             <eg>
-<spec:function>dt-conv:integer-to-string</spec:function>($data as <spec:type>xs:integer?</spec:type>,
+<spec:function>datatypes:integer-to-string</spec:function>($data as <spec:type>xs:integer?</spec:type>,
 		$radix as <spec:type>xs:integer</spec:type>) as <spec:type>xs:string?</spec:type>
 </eg>
             <ulist>
@@ -271,15 +271,15 @@
       <div1>
          <head>References</head>
          <blist>
-	            <bibl id="xpath-30" key="XPath 3.0">
-	               <loc href="http://w3.org/TR/xpath-30/">XML Path Language (XPath) 3.0</loc>.
-	               Jonathan Robie, Don Chamberlin, Michael Dyck, John Snelson, editors. W3C Working Draft, 13 December 2011.</bibl>
-	            <bibl id="xslt-30" key="XSLT 3.0">                        
-	               <loc href="http://w3.org/TR/xslt-30/">XSL Transformations (XSLT) Version 3.0</loc>.
-	               Michael Kay, editor. W3C Working Draft, 10 July 2012.</bibl>         
-	            <bibl id="xquery-30" key="XQuery 3.0">                        
-	               <loc href="http://w3.org/TR/xquery-30/">XQuery 3.0: An XML Query Language</loc>.
-	               Jonathan Robie, Don Chamberlin, Michael Dyck, John Snelson, editors. W3C Working Draft, 13 December 2011.</bibl>
+            <bibl id="xpath-30" key="XPath 3.0">
+               <loc href="http://w3.org/TR/xpath-30/">XML Path Language (XPath) 3.0</loc>.
+               Jonathan Robie, Don Chamberlin, Michael Dyck, John Snelson, editors. W3C Working Draft, 13 December 2011.</bibl>
+            <bibl id="xslt-30" key="XSLT 3.0">                        
+               <loc href="http://w3.org/TR/xslt-30/">XSL Transformations (XSLT) Version 3.0</loc>.
+               Michael Kay, editor. W3C Working Draft, 10 July 2012.</bibl>         
+            <bibl id="xquery-30" key="XQuery 3.0">                        
+               <loc href="http://w3.org/TR/xquery-30/">XQuery 3.0: An XML Query Language</loc>.
+               Jonathan Robie, Don Chamberlin, Michael Dyck, John Snelson, editors. W3C Working Draft, 13 December 2011.</bibl>
             <bibl id="xpath-functions-30" key="XPath and XQuery Functions and Operators 3.0">
                <loc href="http://w3.org/TR/xpath-functions-30/">XPath and XQuery Functions and Operators 3.0</loc>.
                Michael Kay, editor. W3C Working Draft, 13 December 2011.</bibl>                                
