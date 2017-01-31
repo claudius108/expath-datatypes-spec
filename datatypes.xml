@@ -87,6 +87,35 @@
          </div2>
       </div1>
       <div1>
+         <head>Datatype Systems</head>
+         <p>These are functions allowing operations on datatype systems. The implementations should register by default the XML datatype system
+         (<bibref ref="xmlschema11-1"/>). Other datatype systems are implementation dependent.</p>
+         <div2>
+            <head>The <code>datatypes:register-datatype-system</code> function</head>
+            <p>This function registers a datatype system.</p>
+            <eg>
+<spec:function>datatypes:register-datatype-system</spec:function>($uri as <spec:type>xs:anyURI</spec:type>) as <spec:type>empty()</spec:type>
+</eg>
+            <ulist>
+               <item>
+                  <p><code>$uri</code> is the uri of the datatype system to be registered.</p>
+               </item>
+            </ulist>             
+         </div2>
+         <div2>
+            <head>The <code>datatypes:deregister-datatype-system</code> function</head>
+            <p>This function deregisters a datatype system.</p>
+            <eg>
+<spec:function>datatypes:deregister-datatype-system</spec:function>($uri as <spec:type>xs:anyURI</spec:type>) as <spec:type>empty()</spec:type>
+</eg>
+            <ulist>
+               <item>
+                  <p><code>$uri</code> is the uri of the datatype system to be deregistered.</p>
+               </item>
+            </ulist>             
+         </div2>
+      </div1>      
+      <div1>
             <head>Conversions</head>
 		    <p>These functions are for conversions between various datatypes.</p>      
 	      <div2>
@@ -120,7 +149,7 @@
 	               </item>
 	               <item>
 	                  <p><code>$encoding</code> is the encoding used for conversion. The default value is UTF-8. If it is specified an unsupported encoding, this
-	                  is an error <bibref ref="errDTC01"/>.</p>
+	                  is an error <bibref ref="errDT01"/>.</p>
 	               </item>
 	            </ulist>            
 	         </div3> 
@@ -184,7 +213,7 @@
 	               </item>
 	               <item>
 	                  <p><code>$encoding</code> is the encoding used for conversion. The default value is UTF-8. If it is specified an unsupported encoding, this
-	                  is an error <bibref ref="errDTC01"/>.</p>
+	                  is an error <bibref ref="errDT01"/>.</p>
 	               </item>
 	            </ulist>            
 	         </div3> 
@@ -208,7 +237,7 @@
 	               </item>
 	               <item>
 	                  <p><code>$encoding</code> is the encoding used for conversion. The default value is UTF-8. If it is specified an unsupported encoding, this
-	                  is an error <bibref ref="errDTC01"/>.</p>
+	                  is an error <bibref ref="errDT01"/>.</p>
 	               </item>
 	            </ulist>            
 	         </div3> 
@@ -228,7 +257,7 @@
 	               </item>
 	               <item>
 	                  <p><code>$encoding</code> is the encoding used for conversion. The default value is UTF-8. If it is specified an unsupported encoding, this
-	                  is an error <bibref ref="errDTC01"/>.</p>
+	                  is an error <bibref ref="errDT01"/>.</p>
 	               </item>
 	            </ulist>            
 	         </div3>  
@@ -269,7 +298,74 @@
 	            </ulist>            
 	         </div3>  
 	      </div2>  
-      </div1>                      
+      </div1>
+      <div1>
+         <head>User defined datatypes</head>
+         <p>These are functions related to the user defined datatypes.</p>
+         <div2>
+            <head>The <code>datatypes:define</code> function</head>
+            <p>This function defines a user defined datatype.</p>
+         </div2>  
+      </div1>
+      <div1>
+         <head>Mappings</head>
+         <p>These are functions related to mappings between various datatype systems.</p>
+         <div2>
+            <head>The <code>datatypes:set-mapping</code> function</head>
+            <p>This function sets mappings between datatypes belonging to different datatype systems. One can map one or more source datatypes to one target
+            datatype, or one source datatype to one or more target datatypes.</p>
+            <eg>
+<spec:function>datatypes:set-mapping</spec:function>($source-datatype as <spec:type>xs:string+</spec:type>,
+		$target-datatype as <spec:type>xs:string+</spec:type>) as <spec:type>empty()</spec:type>
+</eg>
+            <ulist>
+               <item>
+                  <p><code>$source-datatype</code> is the source datatype to set the mapping for.</p>
+               </item>
+               <item>
+                  <p><code>$target-datatype</code> is the target datatype to set the mapping for.</p>
+               </item>               
+            </ulist>             
+         </div2>
+         <div2>
+            <head>The <code>datatypes:get-mapping</code> function</head>
+            <p>This function returns the mapping(s) between datatypes belonging to different datatype systems. If there are more target datatypes mapped, they are
+            all returned.</p>
+            <eg>
+<spec:function>datatypes:get-mapping</spec:function>($source-datatype as <spec:type>xs:string</spec:type>,
+		$target-datatype-system as <spec:type>xs:anyURI</spec:type>) as <spec:type>xs:string*</spec:type>
+</eg>
+            <ulist>
+               <item>
+                  <p><code>$source-datatype</code> is the datatype to get the mapping(s) of.</p>
+               </item>
+               <item>
+                  <p><code>$target-datatype-system</code> is the datatype system to get the mapping(s) from.</p>
+               </item>               
+            </ulist>             
+         </div2>
+         <div2>
+            <head>The <code>datatypes:delete-mapping</code> function</head>
+            <p>This function deletes the mapping between datatypes belonging to different datatype systems. If they are more source or target datatypes,
+            each individual mapping between each one of them will be deleted.</p>
+            <eg>
+<spec:function>datatypes:delete-mapping</spec:function>($source-datatype as <spec:type>xs:string+</spec:type>,
+		$target-datatype as <spec:type>xs:string+</spec:type>) as <spec:type>empty()</spec:type>
+</eg>
+            <ulist>
+               <item>
+                  <p><code>$source-datatype</code> is the source datatype to delete the mapping for.</p>
+               </item>
+               <item>
+                  <p><code>$target-datatype</code> is the target datatype to delete the mapping for.</p>
+               </item>               
+            </ulist>             
+         </div2>
+      </div1>
+      <div1>
+         <head>Characterizing Operations</head>
+         <p>These are functions allowing operations on the registered datatypes. (https://w3.org/1999/05/06-xmlschema-2/#characterizing-operations)</p>         
+      </div1>      
    </body>
    <back>
       <div1>
@@ -304,7 +400,7 @@
       <div1>
          <head>Summary of Error Conditions</head>
          <blist id="summary-of-error-conditions">
-            <bibl id="errDTC01" key="err:DTC01">The encoding is not supported.</bibl>
+            <bibl id="errDT01" key="err:DT01">The encoding is not supported.</bibl>
          </blist>
       </div1>
    </back>
